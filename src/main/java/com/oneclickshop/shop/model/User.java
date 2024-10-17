@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 @Table(name = "users")
 @Data
@@ -12,7 +13,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy =  GenerationType.UUID)
     @Column(name = "id")
-    private String id;
+    private UUID id;
     @Column(name = "username")
     private String username;
     @Column(name = "password")
